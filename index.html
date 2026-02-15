@@ -170,7 +170,7 @@ Atualmente estou evoluindo meus conhecimentos em JavaScript, Python e Java enqua
         </div>
 
         <div class="card">
-          <h3>Responsividade & Fix</h3>
+          <h3>Responsividade & Consertos</h3>
           <p>Arrumo layout mobile, CSS quebrado, bugs visuais e ajustes.</p>
         </div>
       </div>
@@ -187,7 +187,7 @@ Atualmente estou evoluindo meus conhecimentos em JavaScript, Python e Java enqua
       <div class="projects-grid reveal">
         <article class="project">
           <div class="project-top">
-            <h3>Clinic Website</h3>
+            <h3>Clinica Website</h3>
             <span class="pill">Responsive</span>
           </div>
           <p>Landing page totalmente responsiva com seções de serviço e contato.</p>
@@ -199,7 +199,7 @@ Atualmente estou evoluindo meus conhecimentos em JavaScript, Python e Java enqua
 
         <article class="project">
           <div class="project-top">
-            <h3>Coming Soon</h3>
+            <h3>Em breve</h3>
             <span class="pill">Next</span>
           </div>
           <p>Mais projetos serão adicionados aqui em breve.</p>
@@ -224,23 +224,25 @@ Atualmente estou evoluindo meus conhecimentos em JavaScript, Python e Java enqua
           <p>Escolhe o canal que preferir:</p>
 
           <div class="contact-actions">
-            <a class="btn primary" href="mailto:brunnotj7@gmail.com">Email</a>
-            <a class="btn ghost" href="https://wa.me/5541984534917" target="_blank" rel="noreferrer">WhatsApp</a>
-          </div>
+  <a class="btn primary" href="#" id="btnEmail">Email</a>
+  <a class="btn ghost" href="#" id="btnWhats">WhatsApp</a>
+</div>
         </div>
 
         <form class="contact-form" onsubmit="return false;">
-          <label>
-            Nome
-            <input type="text" placeholder="Seu nome" />
-          </label>
-          <label>
-            Mensagem
-            <textarea rows="4" placeholder="Me conta do seu projeto..."></textarea>
-          </label>
-          <button class="btn primary" type="button" id="envioContato">Enviar</button>
-          <p class="muted" id="formMsg"></p>
-        </form>
+  <label>
+    Nome
+    <input type="text" id="contatoNome" placeholder="Seu nome" />
+  </label>
+
+  <label>
+    Mensagem
+    <textarea rows="4" id="contatoMsg" placeholder="Me conta do seu projeto..."></textarea>
+  </label>
+
+  <button class="btn primary" type="button" id="envioContato">Enviar</button>
+  <p class="muted" id="formMsg"></p>
+</form>
       </div>
     </div>
   </section>
