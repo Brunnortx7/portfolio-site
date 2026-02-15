@@ -116,7 +116,7 @@ p{ line-height:1.6; }
   display:grid;
   grid-template-columns: 1.25fr .75fr;
   gap:22px;
-  align-items:stretch;
+  align-items:start;
 }
 .badge{
   display:inline-flex;
