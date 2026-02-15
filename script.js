@@ -81,6 +81,9 @@ function abrirWhatsApp() {
 
   const url = `https://wa.me/${numeroZap}?text=${encodeURIComponent(texto)}`;
   window.open(url, "_blank");
+
+  inputNome.value = "";
+  inputMsg.value = "";
 }
 
 function abrirEmail() {
@@ -90,6 +93,7 @@ function abrirEmail() {
     mostrarStatus("Escreve uma mensagem antes 🙂");
     inputMsg.focus();
     return;
+
   }
 
   const assunto = "Contato pelo site secor.lat";
@@ -98,6 +102,8 @@ function abrirEmail() {
   )}&body=${encodeURIComponent(texto)}`;
 
   window.location.href = mailto;
+  inputNome.value = "";
+  inputMsg.value = "";
 }
 
 if (btnEnviar) {
