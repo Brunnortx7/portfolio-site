@@ -82,6 +82,7 @@
           <div class="glass-tags">
             <span>HTML</span><span>CSS</span><span>JS</span>
           </div>
+        </div>
       </div>
     </div>
   </main>
@@ -150,43 +151,85 @@ Atualmente, estou evoluindo em JavaScript, além de expandir meus conhecimentos 
     <div class="container">
       <div class="section-head">
         <h2>Projetos</h2>
-        <p>Alguns trabalhos e demos.</p>
+        <p>Alguns projetos reais que eu já coloquei no ar (GitHub Pages) e demos que estão saindo do forno.</p>
       </div>
 
-      <div class="projects-grid reveal">
-        <article class="project">
-          <div class="project-top">
-            <h3>Clinica Website</h3>
-            <span class="pill">Site responsivo</span>
+      <div class="projects-list reveal">
+
+        <article class="project-row">
+          <div class="project-media" aria-hidden="true">
+            <img
+              class="project-shot"
+              alt="Preview do projeto Website da Clínica"
+              src="images/image copy 2.png"
+              loading="lazy"
+            />
           </div>
-          <p>Landing page totalmente responsiva com seções de serviço e contato.</p>
-          <div class="project-actions">
-            <a class="btn small primary" href="https://brunnortx7.github.io/clinica-site/" target="_blank" rel="noreferrer">Ver</a>
-            
+
+          <div class="project-info">
+            <div class="project-top">
+              <h3>Website da Clínica</h3>
+              <span class="pill">Responsivo</span>
+            </div>
+            <p>
+              O Website da Clínica é uma landing page institucional desenvolvida com foco em credibilidade, clareza e experiência do usuário, totalmente responsiva.
+            </p>
+            <div class="project-actions">
+              <a class="btn small primary" href="https://brunnortx7.github.io/clinica-site/" target="_blank" rel="noreferrer">Ver website</a>
+            </div>
           </div>
         </article>
 
-        <article class="project">
-          <div class="project-top">
-            <h3>CyberCIPA</h3>
-            <span class="pill">Site de Eleições</span>
+        <article class="project-row">
+          <div class="project-media" aria-hidden="true">
+            <img
+              class="project-shot"
+              alt="Preview do projeto CyberCIPA"
+              src="images/image copy.png"
+              loading="lazy"
+            />
           </div>
-          <p>Site responsivo de Eleições da CIPA, totalmente online.</p>
-          <div class="project-actions">
-            <a class="btn small primary" href="https://brunnortx7.github.io/CyberCIPA/" target="_blank" rel="noreferrer">Ver</a>
-            
+
+          <div class="project-info">
+            <div class="project-top">
+              <h3>CyberCIPA</h3>
+              <span class="pill">Online</span>
+            </div>
+            <p>
+              O CyberCIPA é um projeto de página institucional desenvolvido para oferecer uma solução moderna e acessível para processos eleitorais internos da CIPA, com foco em usabilidade e navegação intuitiva.
+              A proposta do site é centralizar informações importantes sobre eleições de forma organizada, utilizando um layout clean e profissional.
+            </p>
+            <div class="project-actions">
+              <a class="btn small primary" href="https://brunnortx7.github.io/CyberCIPA/" target="_blank" rel="noreferrer">Ver website</a>
+            </div>
           </div>
         </article>
-        <article class="project">
-          <div class="project-top">
-            <h3>Em breve</h3>
-            <span class="pill">Next</span>
+
+        <article class="project-row">
+          <div class="project-media" aria-hidden="true">
+            <img
+              class="project-shot"
+              alt="Preview do projeto Loja Exemplo"
+              src="images/image.png"
+              loading="lazy"
+            />
           </div>
-          <p>Mais projetos serão adicionados aqui em breve.</p>
-          <div class="project-actions">
-            <a class="btn small ghost" href="#contato">Sugerir projeto</a>
+
+          <div class="project-info">
+            <div class="project-top">
+              <h3>Loja Exemplo</h3>
+              <span class="pill">E-commerce</span>
+            </div>
+            <p>
+              Projeto demonstrativo desenvolvido com o objetivo de apresentar uma estrutura de vitrine digital para e-commerce, focando na experiência do usuário e layout voltado para produtos.
+              O site simula uma loja virtual completa, servindo como base para negócios que desejam vender online com uma interface limpa, atrativa e funcional.
+            </p>
+            <div class="project-actions">
+              <a class="btn small primary" href="https://brunnortx7.github.io/Loja-Exemplo-Web/" target="_blank" rel="noreferrer">Ver website</a>
+            </div>
           </div>
         </article>
+
       </div>
     </div>
   </section>
@@ -204,25 +247,25 @@ Atualmente, estou evoluindo em JavaScript, além de expandir meus conhecimentos 
           <p>Escolhe o canal que preferir:</p>
 
           <div class="contact-actions">
-  <a class="btn primary" href="#" id="btnEmail">Email</a>
-  <a class="btn ghost" href="#" id="btnWhats">WhatsApp</a>
-</div>
+            <a class="btn primary" href="#" id="btnEmail">Email</a>
+            <a class="btn ghost" href="#" id="btnWhats">WhatsApp</a>
+          </div>
         </div>
 
         <form class="contact-form" onsubmit="return false;">
-  <label>
-    Nome
-    <input type="text" id="contatoNome" placeholder="Seu nome" />
-  </label>
+          <label>
+            Nome
+            <input type="text" id="contatoNome" placeholder="Seu nome" />
+          </label>
 
-  <label>
-    Mensagem
-    <textarea rows="4" id="contatoMsg" placeholder="Me conta do seu projeto..."></textarea>
-  </label>
+          <label>
+            Mensagem
+            <textarea rows="4" id="contatoMsg" placeholder="Me conta do seu projeto..."></textarea>
+          </label>
 
-  <button class="btn primary" type="button" id="envioContato">Enviar</button>
-  <p class="muted" id="formMsg"></p>
-</form>
+          <button class="btn primary" type="button" id="envioContato">Enviar</button>
+          <p class="muted" id="formMsg"></p>
+        </form>
       </div>
     </div>
   </section>
@@ -237,5 +280,3 @@ Atualmente, estou evoluindo em JavaScript, além de expandir meus conhecimentos 
   <script src="script.js"></script>
 </body>
 </html>
-
-
