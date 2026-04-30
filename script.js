@@ -1,3 +1,6 @@
+/* ===========================
+   MENU MOBILE
+   =========================== */
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 
@@ -13,22 +16,38 @@ if (menuBtn && nav) {
       menuBtn.setAttribute("aria-expanded", "false");
     });
   });
+
+  document.addEventListener("click", (e) => {
+    if (!nav.contains(e.target) && !menuBtn.contains(e.target)) {
+      nav.classList.remove("open");
+      menuBtn.setAttribute("aria-expanded", "false");
+    }
+  });
 }
 
-const sections = ["sobre", "servicos", "projetos", "contato"].map(id => document.getElementById(id));
+/* ===========================
+   HEADER SCROLL
+   =========================== */
+const header = document.getElementById("header");
+window.addEventListener("scroll", () => {
+  header?.classList.toggle("scrolled", window.scrollY > 40);
+});
+
+/* ===========================
+   ACTIVE NAV LINK
+   =========================== */
+const sectionIds = ["sobre", "habilidades", "projetos", "contato"];
+const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 const navLinks = Array.from(document.querySelectorAll(".nav a")).filter(a => a.getAttribute("href")?.startsWith("#"));
 
 function setActiveLink() {
-  const y = window.scrollY + 120;
-
+  const y = window.scrollY + 140;
   let currentId = "home";
   for (const s of sections) {
-    if (s && s.offsetTop <= y) currentId = s.id;
+    if (s.offsetTop <= y) currentId = s.id;
   }
-
   navLinks.forEach(a => {
-    const href = a.getAttribute("href") || "";
-    const id = href.replace("#", "");
+    const id = (a.getAttribute("href") || "").replace("#", "");
     a.classList.toggle("active", id === currentId);
   });
 }
@@ -36,93 +55,84 @@ function setActiveLink() {
 window.addEventListener("scroll", setActiveLink);
 setActiveLink();
 
+/* ===========================
+   REVEAL ON SCROLL
+   =========================== */
 const revealEls = document.querySelectorAll(".reveal");
-const obs = new IntersectionObserver((entries) => {
+const revealObs = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add("show");
+    if (e.isIntersecting) {
+      e.target.classList.add("show");
+      revealObs.unobserve(e.target);
+    }
   });
-}, { threshold: 0.12 });
+}, { threshold: 0.08 });
 
-revealEls.forEach(el => obs.observe(el));
+revealEls.forEach(el => revealObs.observe(el));
 
-const btnEnviar = document.getElementById("envioContato");
-const btnWhats = document.getElementById("btnWhats");
-const btnEmail = document.getElementById("btnEmail");
+/* ===========================
+   SKILL BARS ANIMATION
+   =========================== */
+const skillFills = document.querySelectorAll(".skill-fill");
+const skillObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add("animated");
+      skillObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+skillFills.forEach(el => skillObs.observe(el));
+
+/* ===========================
+   CONTACT FORM
+   =========================== */
+const numeroZap = "5541984534917";
+const emailDestino = "brunnotj7@gmail.com";
 
 const inputNome = document.getElementById("contatoNome");
 const inputMsg = document.getElementById("contatoMsg");
 const formMsg = document.getElementById("formMsg");
+const btnEnviar = document.getElementById("envioContato");
+const btnEmail = document.getElementById("envioEmail");
+const btnWhats = document.getElementById("btnWhats");
+const btnEmailLink = document.getElementById("btnEmail");
 
-const numeroZap = "5541984534917";
-const emailDestino = "brunnotj7@gmail.com";
-
-function pegarTextoContato() {
-  const nome = (inputNome.value || "").trim();
-  const msg = (inputMsg.value || "").trim();
-
+function getContactText() {
+  const nome = (inputNome?.value || "").trim();
+  const msg = (inputMsg?.value || "").trim();
   if (!msg) return null;
-
-  return `Olá! Meu nome é ${nome || "visitante"}.\n\nMensagem: ${msg}\n\n(Vim pelo site)`;
+  return `Olá! Meu nome é ${nome || "visitante"}.\n\nMensagem: ${msg}\n\n(Vim pelo portfólio)`;
 }
 
-function mostrarStatus(texto) {
-  if (formMsg) formMsg.textContent = texto;
-}
-
-function abrirWhatsApp() {
-  const texto = pegarTextoContato();
-
-  if (!texto) {
-    mostrarStatus("Escreve uma mensagem antes 🙂");
-    inputMsg.focus();
-    return;
+function showStatus(text) {
+  if (formMsg) {
+    formMsg.textContent = text;
+    setTimeout(() => { formMsg.textContent = ""; }, 4000);
   }
-
-  const url = `https://wa.me/${numeroZap}?text=${encodeURIComponent(texto)}`;
-  window.open(url, "_blank");
-
-  inputNome.value = "";
-  inputMsg.value = "";
 }
 
-function abrirEmail() {
-  const texto = pegarTextoContato();
-
-  if (!texto) {
-    mostrarStatus("Escreve uma mensagem antes 🙂");
-    inputMsg.focus();
-    return;
-
-  }
-
-  const assunto = "Contato pelo site secor.lat";
-  const mailto = `mailto:${emailDestino}?subject=${encodeURIComponent(
-    assunto
-  )}&body=${encodeURIComponent(texto)}`;
-
-  window.location.href = mailto;
-  inputNome.value = "";
-  inputMsg.value = "";
+function openWhatsApp() {
+  const texto = getContactText();
+  if (!texto) { showStatus("Escreve uma mensagem antes 🙂"); inputMsg?.focus(); return; }
+  window.open(`https://wa.me/${numeroZap}?text=${encodeURIComponent(texto)}`, "_blank");
+  if (inputNome) inputNome.value = "";
+  if (inputMsg) inputMsg.value = "";
 }
 
-if (btnEnviar) {
-  btnEnviar.addEventListener("click", () => {
-    mostrarStatus("Abrindo WhatsApp...");
-    abrirWhatsApp();
-  });
+function openEmail() {
+  const texto = getContactText();
+  if (!texto) { showStatus("Escreve uma mensagem antes 🙂"); inputMsg?.focus(); return; }
+  const subject = encodeURIComponent("Contato via portfólio");
+  const body = encodeURIComponent(texto);
+  window.location.href = `mailto:${emailDestino}?subject=${subject}&body=${body}`;
+  if (inputNome) inputNome.value = "";
+  if (inputMsg) inputMsg.value = "";
 }
 
-if (btnWhats) {
-  btnWhats.addEventListener("click", (e) => {
-    e.preventDefault();
-    abrirWhatsApp();
-  });
-}
+btnEnviar?.addEventListener("click", openWhatsApp);
+btnEmail?.addEventListener("click", openEmail);
 
-if (btnEmail) {
-  btnEmail.addEventListener("click", (e) => {
-    e.preventDefault();
-    abrirEmail();
-  });
-}
-
+btnWhats?.addEventListener("click", (e) => { e.preventDefault(); openWhatsApp(); });
+btnEmailLink?.addEventListener("click", (e) => { e.preventDefault(); openEmail(); });
