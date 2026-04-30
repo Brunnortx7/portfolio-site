@@ -3,301 +3,301 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brunno | Web Developer</title>
-  <meta name="description" content="Portfólio de Brunno - Web Developer. Sites modernos, responsivos e rápidos com HTML, CSS e JavaScript." />
+  <title>Brunno — Desenvolvedor Front-End</title>
+  <meta name="description" content="Portfólio de Brunno — Desenvolvedor Front-End. Sites modernos, responsivos e performáticos com HTML, CSS e JavaScript." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div class="bg-blobs" aria-hidden="true">
-    <span class="blob b1"></span>
-    <span class="blob b2"></span>
-    <span class="blob b3"></span>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="ambient" aria-hidden="true">
+    <span class="amb-1"></span>
+    <span class="amb-2"></span>
   </div>
 
-  <header class="header">
+  <!-- HEADER -->
+  <header class="header" id="header">
     <div class="container header-inner">
-      <a class="brand" href="#home">
-        <span class="brand-dot"></span>
-        <span>Brunno</span>
-      </a>
+      <a class="brand-mark" href="#home">BNS</a>
 
       <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+        <span></span><span></span>
       </button>
 
       <nav class="nav" id="nav">
         <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
+        <a href="#habilidades">Skills</a>
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
-        <a class="nav-cta" href="#contato">Me chama</a>
+        <a class="nav-cta" href="#contato">Disponível →</a>
       </nav>
     </div>
   </header>
 
-  <main id="home" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <p class="badge">Desenvolvedor Web • Front-End</p>
-
-        <h1>
-          Prazer, <span class="accent">Brunno</span>
-        </h1>
-
-        <p class="subtitle">
-          Construo websites modernos e responsivos com <strong>HTML</strong>, <strong>CSS</strong> e <strong>JavaScript</strong>.
-          Meu foco é performance, clareza e um visual profissional pra sua empresa.
-        </p>
-
-        <div class="hero-actions">
-          <a class="btn primary" href="#projetos">Ver projetos</a>
-          <a class="btn ghost" href="#contato">Contato</a>
-        </div>
-
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">⚡</span>
-            <span class="stat-txt">Sites rápidos</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">📱</span>
-            <span class="stat-txt">Responsivo</span>
-          </div>
-          <div class="stat">
-            <span class="stat-num">✅</span>
-            <span class="stat-txt">Entrega limpa</span>
-          </div>
-        </div>
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-eyebrow fade-up">
+        <span class="status-dot"></span>
+        <span>Disponível para projetos</span>
       </div>
-
-      <div class="hero-right">
-        <div class="glass-card">
-          <p class="glass-title">O que eu faço</p>
-          <ul class="glass-list">
-            <li>Landing pages que convertem</li>
-            <li>Sites institucionais/portfólio</li>
-            <li>Correções e melhorias no layout</li>
-          </ul>
-          <div class="glass-tags">
-            <span>HTML</span><span>CSS</span><span>JS</span>
-          </div>
-        </div>
+      <h1 class="hero-title fade-up delay-1">
+        Desenvolvedor<br><em>Front-End.</em>
+      </h1>
+      <p class="hero-sub fade-up delay-2">
+        Oi, sou o <strong>Brunno</strong>. Construo interfaces que combinam código limpo,
+        design intencional e performance real. Transformo ideias em produtos digitais
+        que funcionam — e impressionam.
+      </p>
+      <div class="hero-actions fade-up delay-3">
+        <a class="btn primary" href="#projetos">Ver projetos</a>
+        <a class="btn ghost" href="#contato">Falar comigo</a>
+      </div>
+      <div class="hero-tech fade-up delay-4">
+        <span>HTML</span><span class="sep">/</span>
+        <span>CSS</span><span class="sep">/</span>
+        <span>JavaScript</span><span class="sep">/</span>
+        <span>Git</span>
       </div>
     </div>
-  </main>
+    <div class="scroll-hint fade-up delay-4" aria-hidden="true"><span></span></div>
+  </section>
 
+  <!-- SOBRE -->
   <section id="sobre" class="section">
     <div class="container">
-      <div class="section-head">
-        <h2>Sobre mim</h2>
-        <p>Sou desenvolvedor web focado em criar sites modernos, rápidos e responsivos, com atenção total ao design e à experiência do usuário.
-Gosto de transformar ideias em páginas limpas, profissionais e bem estruturadas — sempre pensando em performance e conversão.
-
-Atualmente, estou evoluindo em JavaScript, além de expandir meus conhecimentos em Python e Java, enquanto construo projetos reais e aprimoro meu nível como desenvolvedor.
-
- Meu objetivo é entregar sites que não sejam só bonitos, mas que realmente transmitam credibilidade e gerem resultado.</p>
-      </div>
-
-      <div class="about-grid reveal">
-        <div class="about-card">
-          <h3>Meu foco</h3>
+      <p class="section-label reveal">01 — Sobre</p>
+      <div class="about-layout">
+        <div class="about-text reveal">
+          <h2>Código com propósito,<br><em>design com intenção.</em></h2>
           <p>
-            Visual clean, responsividade e código organizado.
-            Entrego um site que passa confiança e funciona bem em qualquer tela.
+            Sou desenvolvedor web focado em criar sites modernos, rápidos e responsivos,
+            com atenção total ao design e à experiência do usuário. Gosto de transformar
+            ideias em páginas limpas e profissionais — sempre pensando em performance e resultado.
+          </p>
+          <p>
+            Atualmente aprofundando JavaScript avançado, além de expandir conhecimentos em
+            Python e Java enquanto construo projetos reais. Meu objetivo é entregar
+            sites que transmitam credibilidade e gerem resultado.
           </p>
         </div>
-
-        <div class="about-card">
-          <h3>Linguagens</h3>
-          <p>HTML • CSS • JavaScript • (PHP básico) • Git/GitHub</p>
-        </div>
-
-        <div class="about-card">
-          <h3>Objetivo</h3>
-          <p>Te ajudar a ter presença online profissional e facilitar a vida do seu negócio, com sites intuitivos e responsivos, trazendo confiança e agilidade ao seu negócio.</p>
+        <div class="about-cards reveal delay-1">
+          <div class="info-card">
+            <span class="info-icon">⚡</span>
+            <div>
+              <h4>Performance</h4>
+              <p>Sites rápidos, código otimizado para qualquer dispositivo.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon">📐</span>
+            <div>
+              <h4>Design</h4>
+              <p>Visual profissional com atenção a cada detalhe de UI.</p>
+            </div>
+          </div>
+          <div class="info-card">
+            <span class="info-icon">🎯</span>
+            <div>
+              <h4>Resultado</h4>
+              <p>Cada projeto focado em credibilidade e conversão.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="servicos" class="section">
+  <!-- HABILIDADES -->
+  <section id="habilidades" class="section section-alt">
     <div class="container">
-      <div class="section-head">
-        <h2>Serviços</h2>
-        <p>O que eu posso entregar pra você.</p>
+      <p class="section-label reveal">02 — Skills</p>
+      <div class="skills-layout">
+        <div class="skills-intro reveal">
+          <h2>Ferramentas &amp;<br><em>tecnologias.</em></h2>
+        </div>
+        <div class="skills-grid reveal delay-1">
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">HTML5</span><span class="skill-level">Avançado</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:90%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">CSS3 / Flexbox / Grid</span><span class="skill-level">Avançado</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:88%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">JavaScript (ES6+)</span><span class="skill-level">Intermediário</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:70%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Git / GitHub</span><span class="skill-level">Intermediário</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:72%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Responsividade / Mobile First</span><span class="skill-level">Avançado</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-head"><span class="skill-name">Python / Java</span><span class="skill-level">Aprendendo</span></div>
+            <div class="skill-bar"><div class="skill-fill" style="--w:35%"></div></div>
+          </div>
+        </div>
       </div>
 
-      <div class="cards reveal">
-        <div class="card">
+      <div class="services-row reveal">
+        <div class="svc-card">
+          <span class="svc-num">01</span>
           <h3>Landing Pages</h3>
-          <p>Páginas criadas para conversão: rápidas, modernas e pensadas para transformar visitantes em clientes. Ideal para divulgar serviços, produtos ou campanhas com impacto.</p>
+          <p>Páginas de alta conversão — rápidas, modernas e focadas em transformar visitantes em clientes.</p>
         </div>
-
-        <div class="card">
-          <h3>Sites Profissionais</h3>
-          <p>Desenvolvo sites institucionais modernos para apresentar sua marca com credibilidade, clareza e um visual profissional.</p>
+        <div class="svc-card">
+          <span class="svc-num">02</span>
+          <h3>Sites Institucionais</h3>
+          <p>Sites profissionais para apresentar sua marca com credibilidade, clareza e visual impecável.</p>
         </div>
-
-        <div class="card">
-          <h3>Responsividade & Consertos</h3>
-          <p>Arrumo layout mobile, CSS quebrado, bugs visuais e ajustes.</p>
+        <div class="svc-card">
+          <span class="svc-num">03</span>
+          <h3>Correções &amp; Layout</h3>
+          <p>Ajustes de responsividade, bugs visuais, refatoração de CSS e melhorias de performance.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- PROJETOS -->
   <section id="projetos" class="section">
     <div class="container">
-      <div class="section-head">
-        <h2>Projetos</h2>
-        <p>Alguns projetos reais que eu já coloquei no ar (GitHub Pages) e demos que estão saindo do forno.</p>
-      </div>
+      <p class="section-label reveal">03 — Projetos</p>
+      <h2 class="section-title reveal">Trabalhos recentes.</h2>
 
-      <div class="projects-list reveal">
-
-        <article class="project-row">
-          <div class="project-media" aria-hidden="true">
-            <img
-              class="project-shot"
-              alt="Preview do projeto Website da Clínica"
-              src="images/image copy 2.png"
-              loading="lazy"
-            />
+      <div class="projects-grid">
+        <article class="project-card reveal">
+          <div class="project-img-wrap">
+            <img src="images/image copy 2.png" alt="Website da Clínica" loading="lazy" />
+            <div class="project-overlay">
+              <a class="proj-link" href="https://brunnortx7.github.io/clinica-site/" target="_blank" rel="noreferrer">Ver projeto ↗</a>
+            </div>
           </div>
-
-          <div class="project-info">
-            <div class="project-top">
-              <h3>Website da Clínica</h3>
-              <span class="pill">Responsivo</span>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="proj-tag">Institucional</span>
+              <span class="proj-tag">Responsivo</span>
             </div>
-            <p>
-              O Website da Clínica é uma landing page institucional desenvolvida com foco em credibilidade, clareza e experiência do usuário, totalmente responsiva.
-            </p>
-            <div class="project-actions">
-              <a class="btn small primary" href="https://brunnortx7.github.io/clinica-site/" target="_blank" rel="noreferrer">Ver website</a>
-            </div>
+            <h3>Website da Clínica</h3>
+            <p>Landing page institucional com foco em credibilidade e experiência do usuário. Totalmente responsiva e otimizada.</p>
+            <a class="proj-btn" href="https://brunnortx7.github.io/clinica-site/" target="_blank" rel="noreferrer">Ver ao vivo ↗</a>
           </div>
         </article>
 
-        <article class="project-row">
-          <div class="project-media" aria-hidden="true">
-            <img
-              class="project-shot"
-              alt="Preview do projeto CyberCIPA"
-              src="images/image copy.png"
-              loading="lazy"
-            />
+        <article class="project-card reveal delay-1">
+          <div class="project-img-wrap">
+            <img src="images/image copy.png" alt="CyberCIPA" loading="lazy" />
+            <div class="project-overlay">
+              <a class="proj-link" href="https://brunnortx7.github.io/CyberCIPA/" target="_blank" rel="noreferrer">Ver projeto ↗</a>
+            </div>
           </div>
-
-          <div class="project-info">
-            <div class="project-top">
-              <h3>CyberCIPA</h3>
-              <span class="pill">Online</span>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="proj-tag">Plataforma</span>
+              <span class="proj-tag">UI Clean</span>
             </div>
-            <p>
-              O CyberCIPA é um projeto de página institucional desenvolvido para oferecer uma solução moderna e acessível para processos eleitorais internos da CIPA, com foco em usabilidade e navegação intuitiva.
-              A proposta do site é centralizar informações importantes sobre eleições de forma organizada, utilizando um layout clean e profissional.
-            </p>
-            <div class="project-actions">
-              <a class="btn small primary" href="https://brunnortx7.github.io/CyberCIPA/" target="_blank" rel="noreferrer">Ver website</a>
-            </div>
+            <h3>CyberCIPA</h3>
+            <p>Plataforma para processos eleitorais internos da CIPA. Layout limpo, organizado e de fácil navegação.</p>
+            <a class="proj-btn" href="https://brunnortx7.github.io/CyberCIPA/" target="_blank" rel="noreferrer">Ver ao vivo ↗</a>
           </div>
         </article>
 
-        <article class="project-row">
-          <div class="project-media" aria-hidden="true">
-            <img
-              class="project-shot"
-              alt="Preview do projeto Loja Exemplo"
-              src="images/image.png"
-              loading="lazy"
-            />
+        <article class="project-card reveal delay-2">
+          <div class="project-img-wrap">
+            <img src="images/image.png" alt="Loja Exemplo" loading="lazy" />
+            <div class="project-overlay">
+              <a class="proj-link" href="https://brunnortx7.github.io/Loja-Exemplo-Web/" target="_blank" rel="noreferrer">Ver projeto ↗</a>
+            </div>
           </div>
-
-          <div class="project-info">
-            <div class="project-top">
-              <h3>Loja Exemplo</h3>
-              <span class="pill">E-commerce</span>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="proj-tag">E-commerce</span>
+              <span class="proj-tag">UI/UX</span>
             </div>
-            <p>
-              Projeto demonstrativo desenvolvido com o objetivo de apresentar uma estrutura de vitrine digital para e-commerce, focando na experiência do usuário e layout voltado para produtos.
-              O site simula uma loja virtual completa, servindo como base para negócios que desejam vender online com uma interface limpa, atrativa e funcional.
-            </p>
-            <div class="project-actions">
-              <a class="btn small primary" href="https://brunnortx7.github.io/Loja-Exemplo-Web/" target="_blank" rel="noreferrer">Ver website</a>
-            </div>
+            <h3>Loja Exemplo</h3>
+            <p>Vitrine digital para e-commerce. Interface limpa focada em experiência do usuário e apresentação de produtos.</p>
+            <a class="proj-btn" href="https://brunnortx7.github.io/Loja-Exemplo-Web/" target="_blank" rel="noreferrer">Ver ao vivo ↗</a>
           </div>
         </article>
 
-        <article class="project-row">
-          <div class="project-media" aria-hidden="true">
-            <img
-              class="project-shot"
-              alt="Preview do projeto Advocacia"
-              src="images/image copy 3.png"
-              loading="lazy"
-            />
+        <article class="project-card reveal delay-3">
+          <div class="project-img-wrap">
+            <img src="images/juri.png" alt="Website Advocacia" loading="lazy" />
+            <div class="project-overlay">
+              <a class="proj-link" href="https://brunnortx7.github.io/Advocacia-Site/" target="_blank" rel="noreferrer">Ver projeto ↗</a>
+            </div>
           </div>
-
-          <div class="project-info">
-            <div class="project-top">
-              <h3>Website Advocacia</h3>
-              <span class="pill">Divulgação</span>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="proj-tag">Jurídico</span>
+              <span class="proj-tag">Divulgação</span>
             </div>
-            <p>
-              Projeto de página desenvolvido para advogados. Totalmente acessível e funcional foco em divulgação do trabalho.
-              Podendo ser adaptado para sociedades.
-            </p>
-            <div class="project-actions">
-              <a class="btn small primary" href="https://brunnortx7.github.io/Advocacia-Site/" target="_blank" rel="noreferrer">Ver website</a>
-            </div>
+            <h3>Website Advocacia</h3>
+            <p>Site profissional para advogados com foco em credibilidade e divulgação. Adaptável para escritórios e sociedades.</p>
+            <a class="proj-btn" href="https://brunnortx7.github.io/Advocacia-Site/" target="_blank" rel="noreferrer">Ver ao vivo ↗</a>
           </div>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="contato" class="section">
+  <!-- CONTATO -->
+  <section id="contato" class="section section-alt">
     <div class="container">
-      <div class="section-head">
-        <h2>Contato</h2>
-        <p>Vamos trabalhar juntos. Abaixo opções de contato.</p>
-      </div>
-
-      <div class="contact-grid reveal">
-        <div class="contact-card">
-          <h3>Fale comigo</h3>
-          <p>Escolhe o canal que preferir:</p>
-
-          <div class="contact-actions">
-            <a class="btn primary" href="#" id="btnEmail">Email</a>
-            <a class="btn ghost" href="#" id="btnWhats">WhatsApp</a>
+      <p class="section-label reveal">04 — Contato</p>
+      <div class="contact-layout">
+        <div class="contact-text reveal">
+          <h2>Vamos construir<br><em>algo juntos?</em></h2>
+          <p>Disponível para projetos freelance, oportunidades de emprego e colaborações. Me manda uma mensagem — responderei rapidamente.</p>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:brunnotj7@gmail.com" id="btnEmail">
+              <span class="cl-icon">✉</span>
+              <span>brunnotj7@gmail.com</span>
+            </a>
+            <a class="contact-link" href="#" id="btnWhats">
+              <span class="cl-icon">💬</span>
+              <span>WhatsApp</span>
+            </a>
+            <a class="contact-link" href="https://github.com/brunnortx7" target="_blank" rel="noreferrer">
+              <span class="cl-icon">⌥</span>
+              <span>github.com/brunnortx7</span>
+            </a>
           </div>
         </div>
 
-        <form class="contact-form" onsubmit="return false;">
-          <label>
-            Nome
-            <input type="text" id="contatoNome" placeholder="Seu nome" />
-          </label>
-
-          <label>
-            Mensagem
-            <textarea rows="4" id="contatoMsg" placeholder="Me conta do seu projeto..."></textarea>
-          </label>
-
-          <button class="btn primary" type="button" id="envioContato">Enviar</button>
-          <p class="muted" id="formMsg"></p>
+        <form class="contact-form reveal delay-1" onsubmit="return false;">
+          <div class="field">
+            <label for="contatoNome">Nome</label>
+            <input type="text" id="contatoNome" placeholder="Seu nome" autocomplete="off" />
+          </div>
+          <div class="field">
+            <label for="contatoMsg">Mensagem</label>
+            <textarea rows="5" id="contatoMsg" placeholder="Me conta do seu projeto ou oportunidade..."></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn primary" type="button" id="envioContato">Enviar via WhatsApp</button>
+            <button class="btn ghost-sm" type="button" id="envioEmail">Email</button>
+          </div>
+          <p class="form-status" id="formMsg"></p>
         </form>
       </div>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p>© 2026 Brunno — All rights reserved.</p>
-      <a href="#home" class="to-top">Voltar ao topo ↑</a>
+      <span class="brand-mark footer-brand">BNS</span>
+      <p>© 2026 Brunno — Desenvolvedor Front-End</p>
+      <a href="#home" class="to-top">↑ Topo</a>
     </div>
   </footer>
 
